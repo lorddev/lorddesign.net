@@ -1,0 +1,288 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+<pre>
+<%@ Page Inherits="LD_Home" Src="_vb/LD_Home.vb" Debug="True" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>: lord design.net :</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+  <style type="text/css">
+<!--
+body {  
+	margin: 0px 0px 0px 0px; 
+	background-attachment: scroll; 
+	background-image: url(images/gray_pattern.png); 
+	background-repeat: repeat; 
+	background-position: center top; 
+	text-align: center; 
+	}
+#main { 
+	position:relative;
+	width:754px;
+	height:546px;
+	top:105px;
+	background-image:url(images/frame.png);
+	}
+#hccPhoto { 
+	position:relative;
+	width:636px;
+	height:461px;
+	top:20px;
+	background-position: 0px 43px; 
+	background-repeat: no-repeat;
+	text-align:left; 
+	overflow:hidden;
+	}
+
+#hccInnerFoot	{
+	position:relative;
+	width:401px;
+	left:3px;
+	top:446px;
+	float:left;
+	font-family: Verdana, Geneva, Sans-serif; 
+	font-size: 7pt; 
+	color: #CCCCCC; 
+	z-index:2
+	}	
+	
+#content { 
+	float:left;
+	width:235px;
+	height:461px;
+	z-index:1;
+	}
+.cat_bar {
+	height:18px;
+	width:225px;
+	background:url(images/gradients/category_bar.gif) repeat;
+	}
+.textblock {
+	width:225px;
+	background-color: #000000;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity: 0.5;
+	}	
+.bodytext {  
+	font-family: Verdana, Geneva, sans-serif; 
+	font-size: 9px;
+	line-height: 13px;
+	color: #CCCCCC; 
+	text-align: justify; 
+	vertical-align: top; 
+	white-space: normal; 
+	margin-top: 2px; 
+	margin-bottom: 4px; 
+	padding: 2px;
+	clip: rect( 0, 0, 0, 0 ); 
+	position: relative;
+	filter:alpha(opacity=100);
+	-moz-opacity:1.0;
+	opacity: 1.0;
+	z-index: 2;
+	}
+	
+a	{
+	color: #CCCCCC;
+	text-decoration: none	
+	}
+
+a:hover {  
+	text-decoration: underline
+	}
+
+.textfield {  
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9px; 
+	color: #000000; 
+	border: 1px #CCCCCC solid; 
+	position: relative; 
+	clip: rect( 0, 0, 0, 0 )
+	}		
+
+.button { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 9px; color: #000000; 
+	font-weight: bold;
+	margin-top: 4px; 
+	text-transform: uppercase; 
+	border: 1px #CCCCCC solid; 
+	background-color: #CCCCCC; 
+	height: 18px; 
+	width: 216px; 
+	position: relative; 
+	clip:   rect( 0, 0, 0, 0 )
+	}
+	
+-->
+</style>
+</head>
+<body>
+<form runat="server">
+  <div align="center">
+    <div id="main">
+      <div id="hccPhoto" style="background-image: url(images/rotation/irn-bru.jpg);" runat="server">
+        <div id="hccInnerFoot" runat="server">
+          © 2005 Aaron J. Lord | visitor: <asp:Label ID="lblCounter" runat="server" /></div>
+        <div id="content">
+          <img src="images/aaron-head.gif" alt=": lord design.net :"/>
+          <div id="web-bar" class="cat_bar" style="margin-top: 10px;">
+            <img src="images/web-development.gif" alt="web development"/><img src="images/down-arrow.gif" alt="" width="18"
+              height="18" id="btn_web" style="cursor: pointer; border:0" onclick="btn_web_Click();" /></div>
+          <div id="txt_web" class="textblock" style="display:none;">
+            <div class="bodytext">
+              expert knowledge in the development of dynamic data-driven web-based applications
+              since 1999 • technologies : asp asp.net html dhtml dom css javascript vbscript vb.net
+              access sql server movable type macromedia flash dreamweaver ultradev</div>
+          </div>
+          <div id="media-bar" class="cat_bar" style="margin-top: 3px;">
+            <img src="images/digital-media.gif" alt="digital media"/><img src="images/down-arrow.gif" alt="" width="18"
+              height="18" id="btn_media" style="cursor: pointer; border: 0;" onclick="btn_media_Click();" /></div>
+          <div id="txt_media" class="textblock" style="display:none;">
+            <div class="bodytext">
+              development of digital media for online and offline use since 1999 • technologies
+              : cakewalk proaudio adobe audition adobe premiere pro windows media mp3 realaudio
+              realvideo cd and dvd production</div>
+          </div>
+          <div id="graphic-bar" class="cat_bar" style="margin-top: 3px;">
+            <img src="images/graphic-design.gif" alt="graphic design"/><img src="images/down-arrow.gif" alt="" width="18"
+              height="18" id="btn_design" style="cursor: pointer; border:0" onclick="btn_design_Click();" /></div>
+          <div id="txt_design" class="textblock" style="display:none;">
+            <div class="bodytext">
+              web site design digital imaging vector graphics encapsulated postscript • technologies
+              : adobe photoshop acrobat page maker illustrator macromedia freehand
+            </div>
+          </div>
+          <div id="client-bar" class="cat_bar" style="margin-top: 3px;">
+            <img src="images/client-list.gif" alt="client list"/><img src="images/down-arrow.gif" alt="" width="18"
+              height="18" id="btn_clients" style="cursor: pointer; border:0;" onclick="btn_clients_Click();" /></div>
+          <div id="txt_clients" class="textblock" style="display:none;">
+            <div class="bodytext">
+              <a href="http://www.abkco.com/home.asp" target="_blank">abkco records</a> &#149;
+              <a href="http://www.calvarychapelchico.com" target="'_blank">calvary chapel chico</a>
+              &#149; <a href="http://www.dambag.com" target="_blank">flood technologies</a> &#149;
+              <a href="http://www.mghworld.com" target="_blank">mgh enterprises</a> &#149; <a href="http://www.whitespeed.com/foxcable/nationalgeographic/form.asp"
+                target="_blank">national geographic</a> &#149; <a href="http://www.northvalleyrecovery.com"
+                  target="_blank">north valley recovery</a> &#149; <a href="http://www.sacaeagles.com"
+                    target="_blank">southern arizona community academy</a> &#149; <a href="http://www.inspiritandintruth.net"
+                      target="_blank">in spirit and in truth</a> &#149; <a href="http://www.whitespeed.com"
+                        target="_blank">whitespeed</a>
+            </div>
+          </div>
+          <div id="contact-bar" class="cat_bar" style="margin-top: 3px;">
+            <img src="images/contact-form.gif" alt="contact form"/><asp:ImageButton ID="btnContactArrow"
+              ImageUrl="images/down-arrow.gif"
+              width="18"
+              height="18"
+              OnClick="btnContactArrow_Click"
+              Style="cursor: pointer; border:0" runat="server"/></div>
+          <div id="hccContact" visible=false class="textblock" runat="server">
+            <div class="bodytext">
+              email
+              <br />
+              <asp:TextBox ID="txtEmail"
+                CssClass="textfield" TextMode="SingleLine"
+                Style="width: 216px; height: 18px; background:url(images/gradients/e-mail.gif) repeat;"
+                runat="server"/>
+              <br />
+              msg<br />
+              <asp:TextBox ID="txtMsg"
+                TextMode="MultiLine" 
+                Rows="4" 
+                CssClass="textfield" 
+                Style="width: 216px; height: 104px; background: url(images/gradients/textarea.gif) repeat;" 
+                runat="server"/>
+         <asp:Button ID="btnSubmit"
+                Text="Send Message"
+                Style="background: url(images/gradients/submit.gif) repeat;"
+                CssClass="button"
+                OnClick="btnSubmit_Click"
+                runat="server" />
+            </div>
+            <asp:Label ID="lblErrMsg" CssClass="bodytext" runat="server" />
+          </div>
+        </div>
+      </div>
+      <div id="left" style="position:relative; float:left;left:45px;top:37px;"><img src="images/mill-sys-logo.gif" alt="Millennium Systems" /> 
+        <img src="images/slogo_xhtml10.png" alt="xhtml 1.0" style="position:relative;left:14px;bottom:6px;"/><img src="images/slogo_css.gif" alt="CSS" style="position:relative;left:30px;bottom:6px"/><img src="images/net-devel.gif" alt="Using the .NET Framework" style="position:relative;left:46;bottom:6px;"/>
+</div>
+      <div id="outerfoot" style="position:relative;float:right; right:45px;top:45px;font-family: Verdana, Geneva, Sans-serif; font-size: 7pt;color: #CCCCCC;">source: js css <a href="http://www.lorddesign.net/write/test.txt">aspx</a> vb | <a href="http://www.lorddesign.net/weblog">blog</a> | <a href="http://www.myspace.com/fiddler56">myspace</a> | <a href="http://www.lorddesign.net">reload</a></div>
+    </div>
+  </div>
+</form>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+var txt_web, btn_web, txt_media, btn_media, txt_design, btn_design, txt_clients, btn_clients, txt_contact, btn_contact;
+
+ txt_web = document.getElementById("txt_web");
+ btn_web = document.getElementById("btn_web");
+ txt_media = document.getElementById("txt_media");
+ btn_media = document.getElementById("btn_media");
+ txt_design = document.getElementById("txt_design");
+ btn_design = document.getElementById("btn_design");
+ txt_clients = document.getElementById("txt_clients");
+ btn_clients = document.getElementById("btn_clients");
+ //txt_contact = document.getElementById("txt_contact");
+ //btn_contact = document.getElementById("btn_contact");
+
+function btn_web_Click(){
+ if(btn_web.src == "http://www.lorddesign.net/dev/images/down-arrow.gif"){
+   txt_web.style.display = "block";
+   btn_web.src = "images/up-arrow.gif";
+ }else if(btn_web.src == "http://www.lorddesign.net/dev/images/up-arrow.gif"){
+   txt_web.style.display = "none";
+   btn_web.src = "images/down-arrow.gif";
+ }
+  }
+  
+function btn_media_Click(){
+ if(btn_media.src == "http://www.lorddesign.net/dev/images/down-arrow.gif"){
+   txt_media.style.display = "block";
+   btn_media.src = "images/up-arrow.gif";
+ }else if(btn_media.src == "http://www.lorddesign.net/dev/images/up-arrow.gif"){
+   txt_media.style.display = "none";
+   btn_media.src = "images/down-arrow.gif";
+ }
+  }
+
+function btn_design_Click(){
+   if(btn_design.src == "http://www.lorddesign.net/dev/images/down-arrow.gif"){
+   txt_design.style.display = "block" ;
+   btn_design.src = "images/up-arrow.gif";
+ }else if(btn_design.src == "http://www.lorddesign.net/dev/images/up-arrow.gif"){
+   txt_design.style.display = "none";
+   btn_design.src = "images/down-arrow.gif";
+ }
+  }
+  
+function btn_clients_Click(){
+   if(btn_clients.src == "http://www.lorddesign.net/dev/images/down-arrow.gif"){
+   txt_clients.style.display = "block" ;
+   btn_clients.src = "images/up-arrow.gif";
+ }else if(btn_clients.src == "http://www.lorddesign.net/dev/images/up-arrow.gif"){
+   txt_clients.style.display = "none";
+   btn_clients.src = "images/down-arrow.gif";
+ }
+  }
+//* deprecated in favor of ASP.NET programmatic access
+//function btn_contact_Click() {
+//   if(btn_contact.src == "http://www.lorddesign.net/dev/images/down-arrow.gif"){
+//   txt_contact.style.display = "block";
+//   btn_contact.src = "images/up-arrow.gif";
+// }else if(btn_contact.src == "http://www.lorddesign.net/dev/images/up-arrow.gif"){
+//   txt_contact.style.display = "none";
+//   btn_contact.src = "images/down-arrow.gif";
+// }
+//  }
+
+-->
+</script>
+</body>
+</html>
+</pre>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>:: xlorddesignx :: professional web development ::</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body ID="PageBody" bgcolor="#CCCCCC" text="#000000" background="http://www.breakthewalls.net/images/world1_rightsidebg.gif"
+  onLoad="PageBody_Load()">
+<div ID="divMain" style="position: absolute; top: 100; width: 236px; height: 420px; background-color: #FFFFFF; text-align: center; font: 8pt Verdana; color: #CCCCCC; border: 2px solid #CCCCCC">
+  &nbsp;<br>
+  <img align="center" src="images/bw-lord-design-temp.gif" width="200" height="297"> 
+  <br>
+  <br>
+  :: new site coming soon! ::<br>
+  :: <a href="http://design.longboardbreaker.com" style="color: #CCCCCC">old site</a> 
+  ::<br>
+  visitor <!--#exec cgi="/cgi-bin/counter.pl?Task=Count&Name=homepage"--><br>
+  <br>
+  <A HREF="http://www.nextmill.net/"> <IMG SRC="http://www.nextmill.net/images/nextmill_logo.gif" ALT="Windows 2003 Hosting"  BORDER="1" WIDTH="120" HEIGHT="30"></A>
+  <br>
+</div>
+</body>
+</html>
+<script Language="JavaScript">
+function PageBody_Load(){
+  var iContentHeight = divMain.clientHeight;
+  var iContentWidth = divMain.scrollWidth;
+  divMain.style.top = ( PageBody.clientHeight / 2 ) - 202 ; 
+  divMain.style.left = ( PageBody.scrollWidth / 2 ) - ( iContentWidth / 2 ) ;
+  //alert("Answer: " + iContentHeight);
+}
+</script>

@@ -1,0 +1,116 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+<pre>
+&lt;%@ Page Inherits="LD_Home" Src="_vb/LD_Home.vb" Debug="True" %&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+  &lt;title&gt;: lord design.net :&lt;/title&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /&gt;
+  &lt;link href="StyleSheet.css" rel="stylesheet" type="text/css" /&gt;  
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;form runat="server"&gt;
+    &lt;div align="center"&gt;
+      &lt;div id="main"&gt;
+        &lt;div id="hccPhoto" style="background-image: url(images/rotation/irn-bru.jpg);" runat="server"&gt;
+          &lt;div id="hccInnerFoot" runat="server"&gt;
+            © 2005 Aaron J. Lord | visitor:
+            &lt;asp:Label ID="lblCounter" runat="server" /&gt;&lt;/div&gt;
+          &lt;div id="content"&gt;
+            &lt;img src="images/aaron-head.gif" alt=": lord design.net :" /&gt;
+            &lt;div id="web-bar" class="cat_bar" style="margin-top: 10px;"&gt;
+              &lt;img src="images/web-development.gif" alt="web development" /&gt;&lt;img src="images/down-arrow.gif"
+                alt="" width="18" height="18" id="btn_web" style="cursor: pointer; border: 0" onclick="btn_web_Click();" /&gt;&lt;/div&gt;
+            &lt;div id="txt_web" class="textblock" style="display: none;"&gt;
+              &lt;div class="bodytext"&gt;
+                expert knowledge in the development of dynamic data-driven web-based applications
+                since 1999 • technologies : asp asp.net html dhtml dom css javascript vbscript vb.net
+                access sql server movable type macromedia flash dreamweaver ultradev&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id="media-bar" class="cat_bar" style="margin-top: 3px;"&gt;
+              &lt;img src="images/digital-media.gif" alt="digital media" /&gt;&lt;img src="images/down-arrow.gif"
+                alt="" width="18" height="18" id="btn_media" style="cursor: pointer; border: 0;"
+                onclick="btn_media_Click();" /&gt;&lt;/div&gt;
+            &lt;div id="txt_media" class="textblock" style="display: none;"&gt;
+              &lt;div class="bodytext"&gt;
+                development of digital media for online and offline use since 1999 • technologies
+                : cakewalk proaudio adobe audition adobe premiere pro windows media mp3 realaudio
+                realvideo cd and dvd production&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id="graphic-bar" class="cat_bar" style="margin-top: 3px;"&gt;
+              &lt;img src="images/graphic-design.gif" alt="graphic design" /&gt;&lt;img src="images/down-arrow.gif"
+                alt="" width="18" height="18" id="btn_design" style="cursor: pointer; border: 0"
+                onclick="btn_design_Click();" /&gt;&lt;/div&gt;
+            &lt;div id="txt_design" class="textblock" style="display: none;"&gt;
+              &lt;div class="bodytext"&gt;
+                web site design digital imaging vector graphics encapsulated postscript • technologies
+                : adobe photoshop acrobat page maker illustrator macromedia freehand
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id="client-bar" class="cat_bar" style="margin-top: 3px;"&gt;
+              &lt;img src="images/client-list.gif" alt="client list" /&gt;&lt;img src="images/down-arrow.gif"
+                alt="" width="18" height="18" id="btn_clients" style="cursor: pointer; border: 0;"
+                onclick="btn_clients_Click();" /&gt;&lt;/div&gt;
+            &lt;div id="txt_clients" class="textblock" style="display: none;"&gt;
+              &lt;div class="bodytext"&gt;
+                &lt;a href="http://www.abkco.com/home.asp" target="_blank"&gt;abkco records&lt;/a&gt; &#149;
+                &lt;a href="http://www.calvarychapelchico.com" target="'_blank"&gt;calvary chapel chico&lt;/a&gt;
+                &#149; &lt;a href="http://www.dambag.com" target="_blank"&gt;flood technologies&lt;/a&gt; &#149;
+                &lt;a href="http://www.mghworld.com" target="_blank"&gt;mgh enterprises&lt;/a&gt; &#149; &lt;a href="http://www.whitespeed.com/foxcable/nationalgeographic/form.asp"
+                  target="_blank"&gt;national geographic&lt;/a&gt; &#149; &lt;a href="http://www.northvalleyrecovery.com"
+                    target="_blank"&gt;north valley recovery&lt;/a&gt; &#149; &lt;a href="http://www.sacaeagles.com"
+                      target="_blank"&gt;southern arizona community academy&lt;/a&gt; &#149; &lt;a href="http://www.inspiritandintruth.net"
+                        target="_blank"&gt;in spirit and in truth&lt;/a&gt; &#149; &lt;a href="http://www.whitespeed.com"
+                          target="_blank"&gt;whitespeed&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id="contact-bar" class="cat_bar" style="margin-top: 3px;"&gt;
+              &lt;img src="images/contact-form.gif" alt="contact form" /&gt;&lt;asp:ImageButton ID="btnContactArrow"
+                ImageUrl="images/down-arrow.gif" Width="18" Height="18" OnClick="btnContactArrow_Click"
+                Style="cursor: pointer; border: 0" runat="server" /&gt;&lt;/div&gt;
+            &lt;div id="hccContact" visible="false" class="textblock" runat="server"&gt;
+              &lt;div class="bodytext"&gt;
+                email
+                &lt;br /&gt;
+                &lt;asp:TextBox ID="txtEmail" CssClass="textfield" TextMode="SingleLine" Style="width: 216px;
+                  height: 18px; background: url(images/gradients/e-mail.gif) repeat;" runat="server" /&gt;
+                &lt;br /&gt;
+                msg&lt;br /&gt;
+                &lt;asp:TextBox ID="txtMsg" TextMode="MultiLine" Rows="4" CssClass="textfield" Style="width: 216px;
+                  height: 104px; background: url(images/gradients/textarea.gif) repeat;" runat="server" /&gt;
+                &lt;asp:Button ID="btnSubmit" Text="Send Message" Style="background: url(images/gradients/submit.gif) repeat;"
+                  CssClass="button" OnClick="btnSubmit_Click" runat="server" /&gt;
+              &lt;/div&gt;
+              &lt;asp:Label ID="lblErrMsg" CssClass="bodytext" runat="server" /&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="left" style="position: relative; float: left; left: 45px; top: 37px;"&gt;
+          &lt;img src="images/mill-sys-logo.gif" alt="Millennium Systems" /&gt;
+          &lt;img src="images/slogo_xhtml10.png" alt="xhtml 1.0" style="position: relative; left: 14px;
+            bottom: 6px;" /&gt;&lt;img src="images/slogo_css.gif" alt="CSS" style="position: relative;
+              left: 30px; bottom: 6px" /&gt;&lt;img src="images/net-devel.gif" alt="Using the .NET Framework"
+                style="position: relative; left: 46; bottom: 6px;" /&gt;
+        &lt;/div&gt;
+        &lt;div id="outerfoot" style="position: relative; float: right; right: 45px; top: 45px;
+          font-family: Verdana, Geneva, Sans-serif; font-size: 7pt; color: #CCCCCC;"&gt;
+          source: &lt;a href="JScript.js"&gt;js&lt;/a&gt; &lt;a href="StyleSheet.css"&gt;css&lt;/a&gt; &lt;a href="write/aspx.txt"&gt;aspx&lt;/a&gt; &lt;a href="write/code_behind.txt"&gt;
+            vb&lt;/a&gt; | &lt;a href="http://www.lorddesign.net/weblog"&gt;blog&lt;/a&gt; | &lt;a href="http://www.myspace.com/fiddler56"&gt;
+              myspace&lt;/a&gt; | &lt;a href="http://www.lorddesign.net"&gt;reload&lt;/a&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+
+  &lt;script language="JavaScript" type="text/javascript" src="JScript.js"&gt;
+&lt;!--
+//moved to file
+--&gt;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</body>
+</html>

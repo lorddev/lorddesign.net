@@ -1,0 +1,2 @@
+<OBJECT RUNAT=Server SCOPE=Application ID=Counter PROGID="MSWC.Counters">
+</OBJECT>
