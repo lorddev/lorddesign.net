@@ -1,7 +1,7 @@
 lorddesign.net
 ==============
 
-This is a freaking 7-year-old ASP.NET website dating from my previous tenure as a freelancer, before I served a 7-year stint in corporate tech. Before this version created in 2005 there were others, even including one which featured a side-shot silhouette of my dreadlocks. That was fun...
+[This is a freaking 7-year-old ASP.NET website](http://www.lorddesign.net/) dating from my previous tenure as a freelancer, before I served a 7-year stint in corporate tech. Before this version created in 2005 there were others, even including one which featured a side-shot silhouette of my dreadlocks. That was fun...
 
 ##Notable Features
 1. VB code which parses server-side VB (normally not browsable) into readable code output in an html `<pre/>` tag. This is useful for when you find job listings that request to see code you’ve written. When you FTP your
