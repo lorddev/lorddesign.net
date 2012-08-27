@@ -4,9 +4,10 @@ lorddesign.net
 [This is a freaking 7-year-old ASP.NET website](http://www.lorddesign.net/) dating from my previous tenure as a freelancer, before I served a 7-year stint in corporate tech. Before this version created in 2005 there were others, even including one which featured a side-shot silhouette of my dreadlocks. That was fun...
 
 ##Notable Features
-1. VB code which parses server-side VB (normally not browsable) into readable code output in an html `<pre/>` tag. This is useful for when you find job listings that request to see code you’ve written. When you FTP your
+1. VB code which parses server-side VB (normally not browsable) into readable code output in an html `<pre/>` tag. This is useful for when you find job listings that request to see code you’ve written, as IIS (rightly) prevents your ASP.NET files from actually being downloaded.
 2. Old JS for the expand/collapse controls intended to showcase 7-year-old DOM coding skills.
 3. HttpModule for forwarding dead links to old MovableType articles to new location on Blogger (which I’ve actually [moved to Wordpress](http://mustfollow.wordpress.com))
+4. Image randomizer (that’s what the “refresh” link was for). It’s now deactivated, as the pictures I had were very old, taken by a very old digital camera, and simply don’t look cool at all anymore.
 
 ## Plans
 1. Fix current bugs where urls to generated html are pointing to the wrong directory.
