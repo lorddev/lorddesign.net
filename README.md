@@ -4,4 +4,4 @@
 
 The old version had VB code which parsed the server-side VB (normally not browsable) into readable code output in an html `<pre/>` tag. This is useful for when you find job listings that request to see code you’ve written, as IIS (rightly) prevents your ASP.NET files from actually being downloaded, and updating one file didn’t require you to update the other as it was auto-generated. This was a cool trick, but it’s no longer necessary as my code is now publicly visible on GitHub.
 
-The site has an HttpModule for forwarding dead links to old MovableType articles to my new blog (which I [moved to Wordpress](http://mustfollow.wordpress.com))
+The site has an HttpModule for forwarding dead links to old MovableType articles to my new blog (which I [moved to Wordpress](http://mustfollow.wordpress.com)).
