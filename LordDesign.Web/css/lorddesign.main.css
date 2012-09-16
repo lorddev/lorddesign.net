@@ -1,0 +1,32 @@
+﻿html, body {
+    height: 100%;
+}
+footer {
+    position:relative;height:80px;clear:both;margin-top:-80px;
+}
+.logo {
+    margin-top:65px;
+}
+.sidebar-nav {
+    padding: 9px 0;
+}
+.sixty {
+    padding-top:60px;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    margin: 0 auto -80px;
+    padding-bottom: 0px;
+}
+.push {
+    height: 80px; clear:both;
+}
+
+/*@media (max-width: 979px) {
+/* nav bar is now fixed, so adjust accordingly
+.push {display:none;}
+.wrapper {
+margin-bottom:-120px !important;
+}
+}*/
