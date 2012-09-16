@@ -1,1 +1,5 @@
-2012/09/15-15:40:48.293 d4c Delete type=3 #1
+2012/09/15-17:27:43.051 efc Recovering log #3
+2012/09/15-17:27:43.054 efc Level-0 table #5: started
+2012/09/15-17:27:43.062 efc Level-0 table #5: 55830 bytes OK
+2012/09/15-17:27:43.070 efc Delete type=0 #3
+2012/09/15-17:27:43.070 efc Delete type=3 #2

@@ -199,9 +199,6 @@
         password="secret" 
         noYsod="true|false" />
     -->
-    <!--<add key="MailServer" value="smtp1.nextmill.net"/>-->
-    <!--<add key="MailServer" value="mail1nf.nextmill.net"/>-->
-
     <errorMail
            from="elmah@lorddesign.net"
            to="support@lorddesign.net"
@@ -209,7 +206,7 @@
            priority="Normal"
            async="true"
            smtpPort="25"
-           smtpServer="mail1nf.nextmill.net"
+           smtpServer="smtp.example.com"
            useSsl="true"
            userName="johndoe"
            password="secret"
@@ -276,14 +273,14 @@
   </elmah>
 
   <system.web>
-    <compilation debug="true" targetFramework="4.0">
-      <buildProviders>
-        <add extension=".html" type="System.Web.Compilation.PageBuildProvider"/>
-      </buildProviders>
+    <compilation debug="false" targetFramework="4.0">
+		<buildProviders>
+			<add extension=".html" type="System.Web.Compilation.PageBuildProvider"/>
+		</buildProviders>
     </compilation>
-    <httpModules>
-      <add name="RedirectModule" type="LordDesign.Web.RedirectModule"/>
-      <!-- 
+	<httpModules>
+		<add name="RedirectModule" type="LordDesign.Web.RedirectModule"/>
+  <!-- 
                 Uncomment the entry below if all of the following are true: 
                 1) you are using wildcard mapping in IIS 5.x
                 2) you are not using .NET 1.0
@@ -312,9 +309,9 @@
       <!--<add name="ErrorTweet" type="Elmah.ErrorTweetModule, Elmah" />-->
 
     </httpModules>
-    <httpHandlers>
-      <add path="*.html" verb="*" type="System.Web.UI.PageHandlerFactory" validate="true"/>
-    </httpHandlers>
+	<httpHandlers>
+		<add path="*.html" verb="*" type="System.Web.UI.PageHandlerFactory" validate="true"/>
+	</httpHandlers>
     <profile>
       <providers>
         <clear/>
@@ -333,26 +330,24 @@
   </system.web>
 
   <system.webServer>
-    <validation validateIntegratedModeConfiguration="false"/>
-    <modules runAllManagedModulesForAllRequests="true">
+	<validation validateIntegratedModeConfiguration="false"/> 
+ <modules runAllManagedModulesForAllRequests="true">
       <add name="UrlRoutingModule" type="System.Web.Routing.UrlRoutingModule, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       <add name="ErrorLog" type="Elmah.ErrorLogModule, Elmah" preCondition="managedHandler" />
       <add name="ErrorFilter" type="Elmah.ErrorFilterModule, Elmah" preCondition="managedHandler" />
       <add name="ErrorMail" type="Elmah.ErrorMailModule, Elmah" preCondition="managedHandler" />
       <add name="ErrorTweet" type="Elmah.ErrorTweetModule, Elmah" preCondition="managedHandler" />
-      <add name="RedirectModule" type="LordDesign.Web.RedirectModule, LordDesign.Web" />
-      
     </modules>
-    <handlers>
-      <remove name="PageHandlerFactory-ISAPI-2.0"/>
-      <add name="HTML by .NET" path="*.html" verb="*" modules="IsapiModule" scriptProcessor="C:\Windows\Microsoft.NET\Framework64\v2.0.50727\aspnet_isapi.dll" resourceType="Unspecified" requireAccess="Script" preCondition="classicMode,runtimeVersionv2.0,bitness64"/>
-      <add name="Perl CGI" path="*.cgi" verb="*" modules="CgiModule" scriptProcessor="C:\Perl64\bin\perl.exe &quot;%s&quot; %s" resourceType="Unspecified"/>
-      <add name="PageHandlerFactory-ISAPI-2.0" path="*.aspx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" resourceType="Unspecified" requireAccess="Script" preCondition="classicMode,runtimeVersionv2.0,bitness32" responseBufferLimit="0"/>
-    </handlers>
-
+	<handlers>
+			<remove name="PageHandlerFactory-ISAPI-2.0"/>
+			<add name="HTML by .NET" path="*.html" verb="*" modules="IsapiModule" scriptProcessor="C:\Windows\Microsoft.NET\Framework64\v2.0.50727\aspnet_isapi.dll" resourceType="Unspecified" requireAccess="Script" preCondition="classicMode,runtimeVersionv2.0,bitness64"/>
+			<add name="Perl CGI" path="*.cgi" verb="*" modules="CgiModule" scriptProcessor="C:\Perl64\bin\perl.exe &quot;%s&quot; %s" resourceType="Unspecified"/>
+			<add name="PageHandlerFactory-ISAPI-2.0" path="*.aspx" verb="GET,HEAD,POST,DEBUG" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll" resourceType="Unspecified" requireAccess="Script" preCondition="classicMode,runtimeVersionv2.0,bitness32" responseBufferLimit="0"/>
+		</handlers>
+	
   </system.webServer>
 
-  <location path="elmah.axd">
+<location path="elmah.axd">
     <system.web>
       <httpHandlers>
         <add verb="POST,GET,HEAD"
