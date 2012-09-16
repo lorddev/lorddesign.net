@@ -1,21 +1,10 @@
 lorddesign.net
 ==============
 
-[This is a freaking 7-year-old ASP.NET website](http://www.lorddesign.net/) dating from my previous tenure as a freelancer, before I served a 7-year stint in corporate tech. Before this version created in 2005 there were others, even including one which featured a side-shot silhouette of my dreadlocks. That was fun...
+![Image](https://github.com/lorddev/lorddesign.net/raw/master/LordDesign.Web/img/lord-design12y.jpg)
 
-##Notable Features
-1. VB code which parses server-side VB (normally not browsable) into readable code output in an html `<pre/>` tag. This is useful for when you find job listings that request to see code you’ve written, as IIS (rightly) prevents your ASP.NET files from actually being downloaded.
-2. Old JS for the expand/collapse controls intended to showcase 7-year-old DOM coding skills.
-3. HttpModule for forwarding dead links to old MovableType articles to new location on Blogger (which I’ve actually [moved to Wordpress](http://mustfollow.wordpress.com))
-4. Image randomizer (that’s what the “refresh” link was for). It’s now deactivated, as the pictures I had were very old, taken by a very old digital camera, and simply don’t look cool at all anymore.
+[This is an older web property](http://www.lorddesign.net/) dating from my first freelancing career at the turn of the century, before I served a 7-year tenure in corporate tech. The site was updated in 2012 with a new logo and a Twitter Bootstrap fluid grid layout, and jQuery slide pagination which I wrote myself.
 
-## Plans
-1. Fix current bugs where urls to generated html are pointing to the wrong directory.
-2. Replace current catch-all email of exceptions with Elmah.
-4. Update HTTP Module to forward to Wordpress.
-5. Branch it for the new version which will include
-	1. A total redesign using [twitter.bootstrap](https://github.com/twitter/bootstrap) 
-	2. and my new logo ([drafted here](https://plus.google.com/photos/112726488856143545477/albums/posts/5778978716605790354))
-	3. Convert to VS 2010 Web Application in C#, with pre-compiled binaries. Use [ICSharpCode](https://github.com/icsharpcode/NRefactory/) to replace current server-side code parsing (which just loaded .aspx and .vb files as text files and wrapped them in a `<pre/>`).
-	4. Also add CSS for code highlighting.
+The old version had VB code which parsed the server-side VB (normally not browsable) into readable code output in an html `<pre/>` tag. This is useful for when you find job listings that request to see code you’ve written, as IIS (rightly) prevents your ASP.NET files from actually being downloaded, and updating one file didn’t require you to update the other as it was auto-generated. This was a cool trick, but it’s no longer necessary as my code is now publicly visible on GitHub.
 
+The site has an HttpModule for forwarding dead links to old MovableType articles to my new blog (which I [moved to Wordpress](http://mustfollow.wordpress.com))
