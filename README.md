@@ -1,7 +1,4 @@
-lorddesign.net
-==============
-
-![Image](https://github.com/lorddev/lorddesign.net/raw/master/LordDesign.Web/img/lord-design12y.jpg)
+![Lord design](https://github.com/lorddev/lorddesign.net/raw/master/LordDesign.Web/img/lord-design12y.jpg)
 
 [This is an older web property](http://www.lorddesign.net/) dating from my first freelancing career at the turn of the century, before I served a 7-year tenure in corporate tech. The site was updated in 2012 with a new logo and a Twitter Bootstrap fluid grid layout, and jQuery slide pagination which I wrote myself.
 
