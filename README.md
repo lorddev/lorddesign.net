@@ -8,4 +8,4 @@ The site had an HttpModule for forwarding dead links to old MovableType articles
 
 ## Latest version
 ![Lord design](/screenshot.png)
-The latest version of the site is a minimalist design meant to look like Razor code comments. The right side contains links.
+The latest version of the site is a minimalist design meant to look like Razor code comments. To the right are some social links as well as a link to my CV.
