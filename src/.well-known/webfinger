@@ -1,0 +1,21 @@
+{
+    "subject": "acct:aaron@www.devlord.io",
+    "aliases":
+    [
+        "https://www.devlord.io/blog/author/aaron/",
+        "https://www.devlord.io/blog/@aaron"
+    ],
+    "links":
+    [
+        {
+            "rel": "self",
+            "type": "application/activity+json",
+            "href": "https://www.devlord.io/blog/author/aaron/"
+        },
+        {
+            "rel": "http://webfinger.net/rel/profile-page",
+            "type": "text/html",
+            "href": "https://www.devlord.io/blog/author/aaron/"
+        }
+    ]
+}
